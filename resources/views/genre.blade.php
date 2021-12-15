@@ -8,7 +8,7 @@
 @if(!empty($séries))
     <ul>
         @foreach($séries as $série)
-            <li>{{$série->nom}}{{$série->image}}</li>
+            <li>{{$série->nom}}</li>
         @endforeach
     </ul>
 

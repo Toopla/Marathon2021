@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'made_tommy_softextrabold';
+    src: url('../../public/font/made_tommy_soft_extrabold_personal_use-webfont.woff2') format('woff2'),
+    url('../../public/font/made_tommy_soft_extrabold_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1 {
+    text-align: center;
+    font-family:'made_tommy_softextrabold';
+}

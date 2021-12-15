@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'made_tommy_softextrabold';
+    src: url('../font/made_tommy_soft_extrabold_personal_use-webfont.woff') format('woff2'),
+    url('../font/made_tommy_soft_extrabold_personal_use-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#main h1 {
+    text-align: center;
+    font-family:'made_tommy_softextrabold';
+    padding-top:5rem;
+    font-size:4rem;
+}
+form {
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top:70px;
+}
+
+
+#recherche{
+
+    padding:15px;
+    border-radius: 10px;
+}
+
+input[type=text] {
+    width: 30%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+
+input[type=submit] {
+    margin-left: 10px;
+   padding:15px;
+    padding-right:30px;
+    border-radius:10px;
+    background:none;
+    background-image: url("../img/loupe.png");
+    background-size: cover;
+    border:none;
+
+    background-repeat: no-repeat;
+
+
+}
+
+.lesfilms {
+    display:flex;
+    justify-content: space-around;
+    margin-top:50px;
+}
+
+.film1 {
+    height:280px;
+    width:200px;
+    background-color:orange;
+    border-radius:25px;
+}
+
+.film2 {
+    height:280px;
+    width:200px;
+    background-color:orange;
+    border-radius:25px;
+}
+
+.film3 {
+    height:280px;
+    width:200px;
+    background-color:orange;
+    border-radius:25px;
+}
+
+.film4 {
+    height:280px;
+    width:200px;
+    background-color:orange;
+    border-radius:25px;
+}
+
+.film5 {
+    height:280px;
+    width:200px;
+    background-color:orange;
+    border-radius:25px;
+}
+
+.lavideo {
+    padding-top:30px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+}
