@@ -1,7 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.profil')
 
 @section('content')
-    C'est la page générale du site,
-    <br />
-    on doit y voir les dernières séries par exemple.
+    <div class="container">
+        <h1>KJFSDBFKJDSBFKJDSBFK</h1>
+    </div>    
+
 @endsection
