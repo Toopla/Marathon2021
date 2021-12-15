@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->name('listeSerie');
 
-Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index']);
+Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
+
+
+
 
 //Route::post("/login", );
