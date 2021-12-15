@@ -12,6 +12,14 @@ class SerieController extends Controller
         return view('liste',['séries'=>$serie]);
     }
 
+    public function cinqSeries(){
+        $serie=Serie::select('id','urlImage')
+        -> orderBy('note','desc')
+        -> take(5)
+        -> get();
+        return view('welcome',['series'=>$serie]);
+    }
+
     public function Recherchegenre($genre){
         $serie=Serie::where('genre'==$genre);
         return $serie;

@@ -34,7 +34,16 @@
         </div>
     </div>
 
+@endsection
 
+    @if(!empty($series))
+        <ul>
+            @foreach($series as $serie)
+                <li>{{$serie->id}} {{$serie->urlImage}}</li>
+            @endforeach
+        </ul>
 
-
+    @else
+        <h3>aucune tâche</h3>
+    @endif
 @endsection
