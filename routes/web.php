@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->name('listeSerie');
 
-Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries']);
+Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
+
+
+
 
 //Route::post("/login", );
