@@ -1,5 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.profil')
 
+@section('content')
+    <div class="container">
+        <h1>KJFSDBFKJDSBFKJDSBFK</h1>
+    </div>
+@endsection
+    
 @section('css')
     <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 @endsection

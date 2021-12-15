@@ -43,7 +43,6 @@ header{
     width: 5rem;
     height: auto;
     padding: 1rem;
-
     border-radius: 24%;
 }
 
@@ -53,10 +52,10 @@ header{
 
 #aLogo{
     background-color: transparent;
+    padding: 0;
 }
 
 #headerProfil{
-
     display: flex;
     flex-direction: row;
     align-items: center;
