@@ -17,12 +17,4 @@ Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->na
 
 Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
 
-
-<<<<<<< HEAD
-Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index']);
-Route::get('/listes',[\App\Http\Controllers\SerieController::class,'rechercheNom']); //à supp
-=======
->>>>>>> partietom
-
-
 //Route::post("/login", );
