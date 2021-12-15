@@ -17,6 +17,7 @@ class CommentController
         # "validated"
         #"user_id"
         #"serie_id"
+        #$commentaire->save();
         # Retourner la page de détail de la série
     }
 }
