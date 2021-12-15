@@ -17,4 +17,6 @@ Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->na
 
 Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
 
+Route::get('/test',[\App\Http\Controllers\SerieController::class, 'detailSerie'])->name('test');
+
 //Route::post("/login", );
