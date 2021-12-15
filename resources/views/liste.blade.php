@@ -8,12 +8,12 @@
 @if(!empty($séries))
     <ul>
         @foreach($séries as $série)
-            <li>{{$série->nom}}{{$série->image}}</li>
+            <li>{{$série->id}}{{$série->image}}</li>
         @endforeach
     </ul>
 
 @else
-    <h3>aucune tâche</h3>
+    <h3></h3>
 @endif
 
 
