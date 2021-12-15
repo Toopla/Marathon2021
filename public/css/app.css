@@ -40,8 +40,14 @@ header{
 }
 
 #imgLogo{
-    width: 6rem;
+    width: 5rem;
     height: auto;
+    padding: 1rem;
+    border-radius: 24%;
+}
+
+#imgLogo a{
+
 }
 
 #aLogo{
