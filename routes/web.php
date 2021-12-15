@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index']);
 
+
 //Route::post("/login", );

@@ -11,4 +11,9 @@ class SerieController extends Controller
         $serie=Serie::all();
         return view('liste',['séries'=>$serie]);
     }
+
+    public function Recherchegenre($genre){
+        $serie=Serie::where('genre'==$genre);
+        return $serie;
+    }
 }
