@@ -17,22 +17,27 @@
 
         <h1> FILMS A L'AFFICHE </h1>
         <div class="lesfilms">
+            @if(!empty($series))
 
-            <div class="film1"></div>
-            <div class="film2"></div>
-            <div class="film3"></div>
-            <div class="film4"></div>
-            <div class="film5"></div>
+                    @foreach($series as $serie)
+                        <a href="">
+                            <div style="background-image: url('{{$serie->urlImage}}')">
+                            </div>
+                        </a>
+                    @endforeach
 
-        </div>
-        <h1>VIDEOS D'AVIS</h1>
-        <div class="lavideo">
-        <video width="600" height="400" controls>
+@else
+<h3>aucune tâche</h3>
+@endif
+</div>
+<h1>VIDEOS D'AVIS</h1>
+<div class="lavideo">
+<video width="600" height="400" controls>
 
-            <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
-        </video>
-        </div>
-    </div>
+<source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+</video>
+</div>
+</div>
 
 
 
