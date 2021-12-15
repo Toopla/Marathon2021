@@ -12,6 +12,16 @@ class SerieController extends Controller
         return view('liste',['séries'=>$serie]);
     }
 
+
+    public function rechercheGenre($genre){
+        $tab=[];
+        $serie=Serie::where('genre',$genre)
+                ->orderBy('nom')
+                ->get();
+        foreach ($serie as $series)
+            $tab[]=[$series->id,$series->nom,$series->urlImage];
+        return json_encode($tab);}
+
     public function cinqSeries(){
         $serie=Serie::select('id','urlImage')
         -> orderBy('note','desc')
@@ -20,8 +30,14 @@ class SerieController extends Controller
         return view('welcome',['series'=>$serie]);
     }
 
-    public function Recherchegenre($genre){
-        $serie=Serie::where('genre'==$genre);
-        return $serie;
+    public function rechercheNom($nom="Doctor Who"){
+        $tab=[];
+        $recherche=$nom;
+        $serie=Serie::where('nom',$recherche)
+            ->orderBy('nom')
+            ->get();
+        foreach ($serie as $series)
+            $tab[]=[$series->id,$series->nom,$series->urlImage];
+        return json_encode($tab);
     }
 }
