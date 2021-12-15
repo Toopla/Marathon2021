@@ -1,4 +1,4 @@
-@extends('profil')
+@extends('layouts.profilLayout')
 
 @section('css')
 	<link rel="stylesheet" type="text/css" href="css/profil.css">
@@ -21,7 +21,6 @@
 		<div>
 			<h1>VOS COMMENTAIRES</h1>
 		</div>
-
 		<div id="commentList">
 			@foreach()
 				<div id="comment">
