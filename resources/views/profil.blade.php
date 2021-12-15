@@ -7,7 +7,7 @@
 
 @section('content')
     <div id="Profil">
-        <div id="imgProfil" style="background-image: url('img/faces/avatar.png');">
+        <div id="imgProfil" style="background-image: url('public/img/faces/avatar.png');">
             <img src="img/crayon.png">
         </div>
         <div>
