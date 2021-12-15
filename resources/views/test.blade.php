@@ -30,8 +30,18 @@
             @else
                 <h4>pas de commentaire</h4>
             @endif
+            @if(!empty($user["series"]))
+                @foreach($user["series"] as $com)
+                    {{ $com->nom }}
+                    <br>
+                    {{ $com->resume }}
+                    <br>
+                    <br>
+                @endforeach
+            @else
+                <h4>pas de commentaire</h4>
+            @endif
         @endif
-
     </div>
 </div>
 
