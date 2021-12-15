@@ -23,11 +23,7 @@
 @if(!empty($séries))
     <ul>
         @foreach($séries as $série)
-<<<<<<< HEAD
-            <li>{{$série->nom}}</li>
-=======
             <a href=""><img src="{{$série->urlImage}}"></a>
->>>>>>> partietom
         @endforeach
     </ul>
 
