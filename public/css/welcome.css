@@ -6,7 +6,7 @@
     font-style: normal;
 
 }
-h1 {
+#main h1 {
     text-align: center;
     font-family:'made_tommy_softextrabold';
     padding-top:5rem;
@@ -52,6 +52,7 @@ input[type=submit] {
 .lesfilms {
     display:flex;
     justify-content: space-around;
+    margin-top:50px;
 }
 
 .film1 {
@@ -90,6 +91,7 @@ input[type=submit] {
 }
 
 .lavideo {
+    padding-top:30px;
     margin:0 auto;
     display: flex;
     justify-content: center;

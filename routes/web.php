@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index']);
+Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->name('listeSerie');
 
 
 //Route::post("/login", );

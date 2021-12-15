@@ -15,6 +15,14 @@ header{
 
 }
 
+@font-face {
+    font-family: 'made_tommy_softextrabold';
+    src: url('../font/made_tommy_soft_extrabold_personal_use-webfont.woff') format('woff2'),
+    url('../font/made_tommy_soft_extrabold_personal_use-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container{
     width: 85%;
     margin: 0 auto;
@@ -23,26 +31,66 @@ header{
 #main{
     background-color: white;
     border-radius: 50px 50px 0px 0px;
-    height: auto;
 }
 
 #imgProfil{
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
 #imgLogo{
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 24%;
+}
+
+#imgLogo a{
+
+}
+
+#aLogo{
+    background-color: transparent;
 }
 
 #headerProfil{
-    width: 22%;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    font-family: 'made_tommy_softextrabold';
+    justify-content: flex-end;
 }
 
+header a{
+    text-decoration: none;
+    color: white;
+    font-family: 'made_tommy_softextrabold';
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #ff6410;
+    font-size: 1.5rem;
 
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header div{
+    width: 33%;
+}
+
+#headerProfil a{
+    margin-left: 1rem;
+}
+
+h1{
+    margin: 0;
+}
+
+#aPhotoProfil{
+    background-color: transparent;
+}
