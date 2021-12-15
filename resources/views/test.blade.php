@@ -17,19 +17,21 @@
 
     </div>
     <div class="laliste">
-<h2>La liste des séries</h2>
+        @if(!empty($user))
+            <h1>{{ $user["nom"] }}</h1>
+            @if(!empty($user["commentaires"]))
+                @foreach($user["commentaires"] as $com)
+                    {{ $com["note"] }}
+                <br>
+                    {{ $com["content"] }}
+                    <br>
+                    <br>
+                @endforeach
+            @else
+                <h4>pas de commentaire</h4>
+            @endif
+        @endif
 
-@if(!empty($séries))
-    <ul>
-        @foreach($séries as $série)
-            <li>{{$série->nom}}</li>
-            <a href=""><img src="{{$série->urlImage}}"></a>
-        @endforeach
-    </ul>
-
-@else
-    <h3></h3>
-@endif
     </div>
 </div>
 
