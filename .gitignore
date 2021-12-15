@@ -10,4 +10,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /.idea
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
 /.vscode
