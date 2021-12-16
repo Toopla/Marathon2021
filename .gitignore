@@ -16,3 +16,5 @@ yarn-error.log
 composer.lock
 composer.json
 vendor/*
+package-lock.json
+package.json
