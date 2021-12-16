@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'made_tommy_softextrabold';
+    src: url('../font/made_tommy_soft_extrabold_personal_use-webfont.woff') format('woff2'),
+    url('../font/made_tommy_soft_extrabold_personal_use-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+h1{
+    font-family: 'made_tommy_softextrabold';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+}
