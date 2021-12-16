@@ -9,7 +9,12 @@ class SerieController extends Controller
 {
     public function index(){
         $serie=Serie::all();
-        return view('liste',['séries'=>$serie]);
+        $genre = Serie::Select('genre')
+        ->groupBy('genre')
+        ->get();
+
+        return view('liste',['séries'=>$serie], ['genres' => $genre]);  
+
     }
 
 

@@ -99,7 +99,9 @@ input[type=submit] {
     display:none;
     margin-top:10px;
 }
-.deroul:hover div{ display:flex;
+.deroul:hover div{ 
+
+    display:flex;
     flex-direction: column;
     font-family: made_tommy_softextrabold;
     color:white;

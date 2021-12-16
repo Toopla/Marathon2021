@@ -17,7 +17,13 @@
 
         <div class="deroul">
             <button>Par genre</button>
-            <form>
+            <div>
+                @foreach($genres as $genre)
+                    <a name="genre" value="{{$genre["genre"]}}">{{$genre['genre']}}</a>
+                @endforeach
+            </div>
+
+            {{-- <form>
                 <div>
                     <input type="radio" name="genre" value="Romance"/>
                     <label for="Romance">Romance</label>
@@ -26,14 +32,14 @@
                 </div>
 
                 <div>
-                    <input type="radio" name="genre" value="Aventure"/>
-                    <label for="Aventure">Aventure</label>
+                    <input type="radio" name="genre" value="Crime"/>
+                    <label for="Aventure">Crime</label>
                     <input type="radio" name="genre" value="Policier"/>
                     <label for="Policier">Policier</label>
                 </div>
 
                 </div>
-            </form>
+            </form> --}}
         </div>
 
 
@@ -48,7 +54,7 @@
 
         <div id="chaqueserie">
         @foreach($séries as $série)
-            <div class="uneserie">
+            <div class="uneserie {{$série->genre}}">
                 <a href={{route('id',$série->id)}}><img src="{{$série->urlImage}}"></a>
                 <p>{{$série->nom}}</p>
                 <p>{{$série->genre}}</p>
@@ -70,4 +76,6 @@
 
 
 </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="js/rechercheGenre.js"></script>
 </html>
