@@ -22,8 +22,7 @@
                         <div class="genrepremiere">
                             <div class="genre">GENRE <br> <p>{{$elt->genre}}</p></div>
                             <div class="premiere">DATE DE PREMIERE SORTIE<p>{{$elt->premiere}}</p></div>
-                        </div>
-                {{$elt->note}}
+           
                 @endforeach
                 </div>
 
@@ -38,4 +37,22 @@
     @else
         <h3>si ça affiche ça c'est que c'est pas bon (serie)</h3>
     @endif
+
+
+    <div id="form">
+        <form method="POST" action="{{route('liste.store')}}">
+            {{ csrf_field() }}
+
+            <input type="text" name="serie" value="{{$elt->id}}">
+            <select name="note">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <textarea name="commentaire"></textarea>
+            <input type="submit" name="envoyer">
+        </form>
+    </div>
 @endsection

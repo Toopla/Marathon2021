@@ -15,7 +15,10 @@ class UserController
         $nomUser = $user->name;
         $avatar = $user->avatar;
         $listComment=[];
-        $comments = Comment::where('user_id',$id_user)->take(5)->get();
+        $comments = Comment::where('user_id',$id_user)
+        ->orderBy("created_at", "DESC")
+        ->take(5)
+        ->get();
         foreach($comments as $com){
             if($com)
             $listComment[] = ["content" =>$com->content,

@@ -37,5 +37,6 @@ Route::fallback(function() {
    return view('404');
 });
 
+Route::post('/liste',[\App\Http\Controllers\SerieController::class, 'store'])->name('liste.store');
 
 
