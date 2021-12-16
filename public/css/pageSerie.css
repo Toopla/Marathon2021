@@ -1,9 +1,29 @@
 #grid{
-    display: grid;
-    grid-template-rows: 33% 33% 33%;
-    grid-template-columns: 40% 40% 20%;
-    grid-template-areas: "Résumé Résumé Saisons"
+	display: grid;
+	grid-template-rows: 33% 33% 33%;
+	grid-template-columns: 40% 40% 20%;
+	grid-template-areas: "Résumé Résumé Saisons"
 						 "Résumé Résumé Saisons"
 						 "Genre Date Saisons";
 
+}
+
+#grid div{
+	background-color: #ff9a00;
+}
+
+#grid:nth-child(1){
+	grid-area: "Résumé";
+}
+
+#grid:nth-child(2){
+	grid-area: "Saisons";
+}
+
+#grid:nth-child(3){
+	grid-area: "Genre";
+}
+
+#grid:nth-child(4){
+	grid-area: "Date";
 }

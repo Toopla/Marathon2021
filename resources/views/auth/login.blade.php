@@ -1,7 +1,35 @@
-@extends('layouts.app')
+@extends('layouts.form')
+
+@section('css')
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+@endsection
+
 
 @section('content')
-    <div class="container">
+
+{{--     <div id="form">
+        <h1>De nouveau là !</h1>
+        <form method="POST" action="{{route('login')}}">
+            @csrf
+            <input type="text" name="email" placeholder="Adresse Mail">
+            <input type="password" name="password" placeholder="Votre mot de passe">
+            <label for="remember">Remember me ?
+            <input type="checkbox" name="remember"></label>
+            <button type="submit">Se Connecter</button>
+
+        </form>
+    </div>
+
+
+
+ --}}
+
+
+
+
+
+
+<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">

@@ -17,6 +17,6 @@ Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->na
 
 Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
 
-Route::get('/liste/{id}',[\App\Http\Controllers\SerieController::class, 'detailSerie'])->name('id');
+Route::get('/profil/{id}',[\App\Http\Controllers\UserController::class, 'profil'])->name('profil');
 
-//Route::post("/login", );
+Route::get('/liste/{id}',[\App\Http\Controllers\SerieController::class, 'detailSerie'])->name('id');

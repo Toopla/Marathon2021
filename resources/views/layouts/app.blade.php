@@ -8,7 +8,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('css')
 </head>
@@ -18,16 +17,26 @@
         <h1><a href="{{route('listeSerie')}}">Séries</a></h1>
     </div>
     <a href="" id="aLogo"><img src="img/logo.png" id= "imgLogo"></a>
-    @if(isset($_SESSION['id']))
+    @guest
         <div id="headerProfil">
-            <h3><a href="">Bonjour [INSERT NOM]</a></h3>
-            <a href="" id="aPhotoProfil"><img src="img/faces/avatar1.png" id="imgProfil"></a>
+            <h3><a href="{{ route('login') }}">Connexion</a><a href="{{ route('register') }}">Inscription</a></h3>
         </div>
     @else
         <div id="headerProfil">
-            <h3><a href="">Connexion</a><a href="">Inscription</a></h3>
+            <h3><a href="{{route('profil', Auth::user()->id)}}">Bonjour {{ Auth::user()->name }}</a></h3>
+            <a href="{{route('profil', Auth::user()->id)}}" id="aPhotoProfil"><img src="img/faces/{{ Auth::user()->avatar }}.png" id="imgProfil"></a>
         </div>
-    @endif
+
+
+
+
+
+
+
+
+
+
+    @endguest
 
 </header>
 <div id="main">
@@ -35,36 +44,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-<!-- Authentication Links -->
-{{-- <nav>
-
-    <ul>
-        @guest
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
-        @else
-            <li> Bonjour {{ Auth::user()->name }}</li>
-            @if (Auth::user())
-                <li><a href="#">Des liens spécifiques pour utilisateurs connectés..</a></li>
-            @endif
-            <li><a href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                    Logout
-                </a></li>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-        @endguest
-    </ul>
-</nav> --}}
 
 <!-- Scripts -->
 </body>
