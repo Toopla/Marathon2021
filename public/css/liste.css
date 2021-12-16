@@ -89,6 +89,7 @@ input[type=submit] {
 #chaqueserie {
     display:flex;
     flex-wrap:wrap;
+    justify-content: center;
 }
 
 .uneserie {
@@ -98,16 +99,22 @@ input[type=submit] {
 .deroul div{
     display:none;
     margin-top:10px;
+    width: 80%;
 }
 .deroul:hover div{ 
 
     display:flex;
-    flex-direction: column;
     font-family: made_tommy_softextrabold;
-    color:white;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .deroul label {
     padding:10px;
+}
+
+.deroul input{
+    color:white;
+    margin-right: 1rem;
 }
 
 
@@ -117,6 +124,8 @@ input[type=submit] {
     width:fit-content;
     height:fit-content;
     margin-left:30px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -133,4 +142,11 @@ input[type=submit] {
 
 
 
+}
+
+.buttonGenre{
+    background-color: #ff6410;
+    border: none;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;    
 }

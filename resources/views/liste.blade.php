@@ -19,7 +19,7 @@
             <button>Par genre</button>
             <div>
                 @foreach($genres as $genre)
-                    <a name="genre" value="{{$genre["genre"]}}">{{$genre['genre']}}</a>
+                    <input type="button" name="genre" value="{{$genre["genre"]}}" class="buttonGenre">
                 @endforeach
             </div>
 
