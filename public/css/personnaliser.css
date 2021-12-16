@@ -1,0 +1,44 @@
+img,label{
+	width: 4rem;
+	height: auto;
+	border-radius: 50%;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	background-color: #ff9a00;
+}
+
+#avatar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#avatar div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+#personnaliser h1{
+	text-align: center;
+	font-family: 'made_tommy_softextrabold';
+	padding-bottom: 3rem;	
+}
+
+form input{
+	width: 25%;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	height: 3rem;
+	border-style: solid;
+	border-radius: 1rem;
+}
+
+#personnaliser{
+	padding-top: 3rem;
+}
