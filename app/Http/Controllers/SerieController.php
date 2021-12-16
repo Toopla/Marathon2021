@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Serie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SerieController extends Controller
 {
     public function index(){
         $serie=Serie::all();
         return view('liste',['séries'=>$serie]);
-    }
-
-    public function supprimeComment(){
     }
 
 
@@ -42,5 +41,28 @@ class SerieController extends Controller
         foreach ($serie as $series)
             $tab[]=[$series->id,$series->nom,$series->urlImage];
         return json_encode($tab);
+    }
+
+    public function store(Request $request){
+        $this->validate(
+            $request,
+            [
+                'commentaire'=>'required',
+                'note'=>'required',
+                'serie'=>'required',
+            ]
+        );
+
+        DB::table('comments')->insert(
+            [
+                'content'=>$request->commentaire,
+                'note'=>$request->note,
+                'validated'=>false,
+                'user_id'=>Auth::user()->id,
+                'serie_id'=>$request->serie,
+                'created_at'=>now(),
+                'updated_at'=>now(),
+            ]
+        );
     }
 }

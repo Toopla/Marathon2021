@@ -20,6 +20,6 @@ Route::view('/connexion', 'connexion')->name('connexion');
 
 
 // En test
-Route::get('/profil/{id}',[\App\Http\Controllers\UserController::class, 'statistique'])->name('profil');
+Route::post('/liste/create',[\App\Http\Controllers\UserController::class, 'statistique'])->name('profil');
 
 //Route::post("/login", );

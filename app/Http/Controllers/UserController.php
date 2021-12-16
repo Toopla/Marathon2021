@@ -31,30 +31,24 @@ class UserController
             }
         }
 
-        $tab = ["id" =>$id_user,
-            "nom"=>$nomUser,
-            "avatar" => $avatar,
-            "commentaires" =>$listComment,
-            "series" => $series];
-
-        return view('test',['user' => $tab]);
-    }
-
-    public function avatar($id_user,$source){
-        $user = User::findOrFail($id_user);
-        $user->avatar = $source;
-        $user->save();
-    }
-
-    public function statistique($id_user){
         $total = 0;
         $user = User::findOrFail($id_user);
         $episodes = $user->seen;
         foreach ($episodes as $episode){
             $total+=$episode->duree;
         }
-        #$listCom = $user->comment->orderBy('serie_id')->get();
-        return view('test',['list' => $total]);
+        return view('test',["id" =>$id_user,
+            "nom"=>$nomUser,
+            "avatar" => $avatar,
+            "commentaires" =>$listComment,
+            "series" => $series,
+            "duree"=>$total]);
+    }
+
+    public function avatar($id_user,$source){
+        $user = User::findOrFail($id_user);
+        $user->avatar = $source;
+        $user->save();
     }
 
 }
