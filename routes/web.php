@@ -18,8 +18,8 @@ Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->na
 Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
 Route::view('/connexion', 'connexion')->name('connexion');
 
-
 // En test
 Route::post('/liste/create',[\App\Http\Controllers\UserController::class, 'statistique'])->name('profil');
+Route::post('/liste/search',[\App\Http\Controllers\SerieController::class, 'search'])->name('serie.search');
 
 //Route::post("/login", );

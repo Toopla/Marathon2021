@@ -6,6 +6,7 @@ use App\Models\Comment;
 use App\Models\Serie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SerieController extends Controller
 {
@@ -43,6 +44,8 @@ class SerieController extends Controller
         return json_encode($tab);
     }
 
+
+    #Creer un commentaire
     public function store(Request $request){
         $this->validate(
             $request,
@@ -65,4 +68,13 @@ class SerieController extends Controller
             ]
         );
     }
+
+    public function search(){
+        $q = request()->input('q');#la key c'est le name de l'input
+
+        $series =Serie::where("name","like","%$q%");
+
+        return view('search')->with('series',$series);
+    }
+
 }
