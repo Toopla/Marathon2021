@@ -24,3 +24,13 @@ Route::get('/liste/{id}',[\App\Http\Controllers\SerieController::class, 'detailS
 Route::get('/personnaliser/{id}',[\App\Http\Controllers\UserController::class, 'personnaliser'])->name('perso');
 
 Route::post('/personnaliser/{id}',[\App\Http\Controllers\UserController::class, 'changerProfil'])->name('changerProfil');
+
+Route::get('deco', function(){
+
+    Auth::logout();
+    return view('welcome');
+
+})->name('deco');
+
+
+

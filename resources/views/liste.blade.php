@@ -21,6 +21,7 @@
                 @foreach($genres as $genre)
                     <input type="button" name="genre" value="{{$genre["genre"]}}" class="buttonGenre">
                 @endforeach
+                <input type="button" name="tout" class="buttonGenre" value="Tout">
             </div>
 
             {{-- <form>
