@@ -24,4 +24,3 @@ Route::get('/liste/{id}',[\App\Http\Controllers\UserController::class, 'detailSe
 Route::get('/personnaliser/{id}',[\App\Http\Controllers\UserController::class, 'personnaliser'])->name('perso');
 
 Route::post('/personnaliser/{id}',[\App\Http\Controllers\UserController::class, 'changerProfil'])->name('changerProfil');
-
