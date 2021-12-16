@@ -33,4 +33,9 @@ Route::get('deco', function(){
 })->name('deco');
 
 
+Route::fallback(function() {
+   return view('404');
+});
+
+
 
