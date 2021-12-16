@@ -41,8 +41,7 @@
 
 
 
-<!-- Authentication Links -->
-{{-- <nav>
+<nav>
     <ul>
         @guest
             <li><a href="{{ route('login') }}">Login</a></li>
@@ -62,7 +61,7 @@
             </form>
         @endguest
     </ul>
-</nav> --}}
+</nav>
 
 <!-- Scripts -->
 </body>

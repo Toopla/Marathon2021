@@ -53,8 +53,8 @@ class UserController
         foreach ($episodes as $episode){
             $total+=$episode->duree;
         }
-        $listCom = $user->comment->orderBy('serie_id')->get();
-        return view('test',['list' => $listCom]);
+        #$listCom = $user->comment->orderBy('serie_id')->get();
+        return view('test',['list' => $total]);
     }
 
 }
