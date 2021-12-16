@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-    
 @section('css')
     <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 @endsection
@@ -39,8 +38,5 @@
 </video>
 </div>
 </div>
-
-
-
 
 @endsection

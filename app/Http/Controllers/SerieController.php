@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
+use App\Models\Episode;
 use App\Models\Serie;
 use Illuminate\Http\Request;
 
@@ -46,5 +48,15 @@ class SerieController extends Controller
         return json_encode($tab);
     }
 
-    
+    public function detailSerie($id=73){
+        $tab=[];
+        $serie=Serie::where("id",$id)
+            ->get();
+        $commentaire=Comment::where("id",$id)
+            ->get();
+        $episode=Episode::where("serie_id",$id)
+            ->get();
+
+        return view('test',['series'=>$serie,'commentaires'=>$commentaire,'episodes'=>$episode]);
+    }
 }
