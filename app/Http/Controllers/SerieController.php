@@ -11,7 +11,12 @@ class SerieController extends Controller
 {
     public function index(){
         $serie=Serie::all();
-        return view('liste',['séries'=>$serie]);
+        $genre = Serie::Select('genre')
+        ->groupBy('genre')
+        ->get();
+
+        return view('liste',['séries'=>$serie], ['genres' => $genre]);  
+
     }
 
 
@@ -32,14 +37,14 @@ class SerieController extends Controller
         return view('welcome',['series'=>$serie]);
     }
 
-    public function rechercheNom($nom="Doctor Who"){
+    public function rechercheNom($nom){
         $tab=[];
         $recherche=$nom;
         $serie=Serie::where('nom',$recherche)
             ->orderBy('nom')
             ->get();
         foreach ($serie as $series)
-            $tab[]=[$series->id,$series->nom,$series->urlImage];
+            $tab[]=[$series->id,$series->nom,$series->urlImage,];
         return json_encode($tab);
     }
 

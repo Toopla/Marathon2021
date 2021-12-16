@@ -26,7 +26,7 @@ body, html{
 .listecontainer {
     display:flex;
     width:100%;
-    min-height:100%;
+
     flex-direction: row;
     justify-content: space-between;
 }
@@ -84,4 +84,69 @@ input[type=submit] {
     background-repeat: no-repeat;
 
 
+}
+
+#chaqueserie {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.uneserie {
+    padding:20px;
+}
+
+.deroul div{
+    display:none;
+    margin-top:10px;
+    width: 80%;
+}
+.deroul:hover div{ 
+
+    display:flex;
+    font-family: made_tommy_softextrabold;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.deroul label {
+    padding:10px;
+}
+
+.deroul input{
+    color:white;
+    margin-right: 1rem;
+}
+
+
+
+.deroul {
+
+    width:fit-content;
+    height:fit-content;
+    margin-left:30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.deroul button {
+    background-color:#ff6410;
+    border:none;
+    padding:10px;
+    width:130px;
+    border-radius:20px;
+    font-family: made_tommy_softextrabold;
+    color:white;
+    font-weight: lighter;
+    font-size:15px;
+
+
+
+}
+
+.buttonGenre{
+    background-color: #ff6410;
+    border: none;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;    
 }
