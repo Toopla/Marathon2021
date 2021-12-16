@@ -102,7 +102,6 @@ input[type=submit] {
     width: 80%;
 }
 .deroul:hover div{ 
-
     display:flex;
     font-family: made_tommy_softextrabold;
     flex-direction: row;

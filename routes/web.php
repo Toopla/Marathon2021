@@ -25,3 +25,10 @@ Route::get('/personnaliser/{id}',[\App\Http\Controllers\UserController::class, '
 
 Route::post('/personnaliser/{id}',[\App\Http\Controllers\UserController::class, 'changerProfil'])->name('changerProfil');
 
+Route::get('deco', function(){
+
+    Auth::logout();
+    return view('welcome');
+
+})->name('deco');
+

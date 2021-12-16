@@ -21,7 +21,7 @@
 
 
     <div id="headerProfil">
-        <h3><a href="">Se deconnecter</a></h3>
+        <h3><a href="{{route('deco')}}">Se deconnecter</a></h3>
     </div>
 
 
