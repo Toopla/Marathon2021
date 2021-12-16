@@ -17,19 +17,9 @@
 
     </div>
     <div class="laliste">
-<h2>La liste des séries</h2>
-
-@if(!empty($séries))
-    <ul>
-        @foreach($séries as $série)
-            <li>{{$série->nom}}</li>
-            <a href=""><img src="{{$série->urlImage}}"></a>
-        @endforeach
-    </ul>
-
-@else
-    <h3></h3>
-@endif
+        @if(!empty($list))
+            <h1>{{ $list }}</h1>
+        @endif
     </div>
 </div>
 
