@@ -14,7 +14,7 @@
 <body>
 
 <header class="container">
-    <img src="">
+    <a href="{{route('accueil')}}"><img src="img/logo.png" id="logo"></a>
 </header>
 
 <div id="main">

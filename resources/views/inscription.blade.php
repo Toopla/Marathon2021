@@ -7,7 +7,7 @@
 			<input type="text" name="login" placeholder="Nom d'utilisateur">
 			<input type="password" name="mdp" placeholder="Votre mot de passe">
 			<input type="password" name="confirm_mdp" placeholder="Confirmer le mot de passe">
-			<input type="email" name="mail" placeholder="Votre mot de passe">
+			<input type="email" name="mail" placeholder="Votre adresse mail">
 			<input type="email" name="confirm_mail" placeholder="Confirmer votre email">
 			<input type="submit" name="inscription" value="S'inscrire">
 		</form>
