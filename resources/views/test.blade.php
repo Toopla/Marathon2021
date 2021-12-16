@@ -17,30 +17,8 @@
 
     </div>
     <div class="laliste">
-        @if(!empty($user))
-            <h1>{{ $user["nom"] }}</h1>
-            @if(!empty($user["commentaires"]))
-                @foreach($user["commentaires"] as $com)
-                    {{ $com["note"] }}
-                <br>
-                    {{ $com["content"] }}
-                    <br>
-                    <br>
-                @endforeach
-            @else
-                <h4>pas de commentaire</h4>
-            @endif
-            @if(!empty($user["series"]))
-                @foreach($user["series"] as $com)
-                    {{ $com->nom }}
-                    <br>
-                    {{ $com->resume }}
-                    <br>
-                    <br>
-                @endforeach
-            @else
-                <h4>pas de commentaire</h4>
-            @endif
+        @if(!empty($list))
+            <h1>{{ $list }}</h1>
         @endif
     </div>
 </div>

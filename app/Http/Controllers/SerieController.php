@@ -12,6 +12,9 @@ class SerieController extends Controller
         return view('liste',['séries'=>$serie]);
     }
 
+    public function supprimeComment(){
+    }
+
 
     public function rechercheGenre($genre){
         $tab=[];
