@@ -65,4 +65,35 @@ class SerieController extends Controller
 
         return view('test', ['series' => $serie, 'commentaires' => $commentaire, 'episodes' => $episode]);
     }
+    #Creer un commentaire
+    public function store(Request $request){
+        $this->validate(
+            $request,
+            [
+                'commentaire'=>'required',
+                'note'=>'required',
+                'serie'=>'required',
+            ]
+        );
+
+        DB::table('comments')->insert(
+            [
+                'content'=>$request->commentaire,
+                'note'=>$request->note,
+                'validated'=>false,
+                'user_id'=>Auth::user()->id,
+                'serie_id'=>$request->serie,
+                'created_at'=>now(),
+                'updated_at'=>now(),
+            ]
+        );
+    }
+
+    public function search(){
+        $q = request()->input('q');#la key c'est le name de l'input
+
+        $series =Serie::where("name","like","%$q%");
+
+        return view('liste')->with('series',$series);
+    }
 }
