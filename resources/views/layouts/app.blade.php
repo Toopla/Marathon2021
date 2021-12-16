@@ -8,16 +8,43 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
-<header>
-    <a href="{{ url('/') }}">
-        Ma super appli
-    </a>
+<header class="container">
+    <div>
+        <h1><a href="{{route('listeSerie')}}">Séries</a></h1>
+    </div>
+    <a href="" id="aLogo"><img src="img/logo.png" id= "imgLogo"></a>
+    @if(isset($_SESSION['id']))
+        <div id="headerProfil">
+            <h3><a href="">Bonjour [INSERT NOM]</a></h3>
+            <a href="" id="aPhotoProfil"><img src="img/faces/avatar1.png" id="imgProfil"></a>
+        </div>
+    @else
+        <div id="headerProfil">
+            <h3><a href="">Connexion</a><a href="">Inscription</a></h3>
+        </div>
+    @endif
+
 </header>
+<div id="main">
+    @yield('content')
+</div>
+
+
+
+
+
+
+
+
+
 <!-- Authentication Links -->
-<nav>
+{{-- <nav>
+
     <ul>
         @guest
             <li><a href="{{ route('login') }}">Login</a></li>
@@ -37,10 +64,10 @@
             </form>
         @endguest
     </ul>
-</nav>
-<div id="main">
-    @yield('content')
-</div>
+
+</nav> --}}
+
+
 <!-- Scripts -->
 </body>
 </html>
