@@ -1,0 +1,93 @@
+h2 {
+    font-family: made_tommy_softextrabold;
+    font-size:5rem;
+    margin-left:14rem;
+    height: 10px;   width: 100%;
+}
+.leresume {
+    background-color: #ff9a00;
+    width:450px;
+    padding:20px;
+    margin-left:10%;
+    font-family: made_tommy_softextrabold;
+    font-size:1.5rem;
+    color:white;
+    border-radius:10px;
+
+}
+
+.genre {
+    padding:20px;
+    margin-left:10%;
+    font-family: made_tommy_softextrabold;
+    font-size:1.5rem;
+    color:white;
+    background-color: #ff9a00;
+    border-radius:10px;
+    width:200px;
+    text-align: center;
+    margin-top:10px;
+
+}
+
+
+.genre p {
+    font-size:40px;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.genrepremiere {
+    display:flex;
+    padding-bottom:20px;
+}
+
+.premiere {
+    padding:20px;
+
+    font-family: made_tommy_softextrabold;
+    font-size:1.0rem;
+    color:white;
+    background-color: #ff9a00;
+    border-radius:10px;
+    width:200px;
+    margin-left:10px;
+    margin-top:10px;
+}
+.premiere p {
+    margin:0;
+    text-align:center;
+    padding-top:10px;
+    font-size:1.5rem;
+}
+
+.titrep h1 {
+    font-family: made_tommy_softextrabold;
+    padding-top:112px;
+    margin-left:10px;
+    font-size:1.2rem;
+}
+
+.leresume p {
+    font-size:1.3rem;
+    margin:0;
+    padding-bottom:10px;
+
+}
+.titrep p  {
+    margin-top:170px;
+    margin-left:-280px;
+    font-family: made_tommy_softextrabold;
+    margin-right:5px;
+}
+
+.fa-cheese {
+    padding:5px;
+    margin-top:10.5rem;
+
+    color: #ff9a00;
+}
+
+.conteneurfilm {
+    width:100%;
+}

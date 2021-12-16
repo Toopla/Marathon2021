@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /storage/*.key
+/vendor
+.env
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
@@ -10,7 +12,9 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /.idea
-Fichiers non suivis:
-  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
-
 /.vscode
+composer.lock
+composer.json
+vendor/*
+package-lock.json
+package.json

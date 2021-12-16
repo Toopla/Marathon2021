@@ -10,8 +10,8 @@
 		<a href="{{route('perso', $id)}}"><i class="fas fa-cog"></i></a>
 	</div>	
 	<div id="Profil">
-		<div id="imgProfil" style="background-image: url('../img/faces/avatar.png');">
-			<a href=""><i class="fas fa-pen"></i></a>		
+		<div id="imgProfil" style="background-image: url('public/img/faces/avatar.png');">
+			<a href=""><i class="fas fa-pen"></i></a>
 		</div>	
 		<div>
 			<h1>{{$nom}}</h1>
@@ -39,5 +39,6 @@
 			@endforeach
 		</div>
 	</div>	
+
 
 @endsection
