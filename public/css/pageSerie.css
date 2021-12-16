@@ -1,0 +1,9 @@
+#grid{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-areas: "Résumé Résumé Saisons"
+						 "Résumé Résumé Saisons"
+						 "Genre Date Saisons";
+
+}

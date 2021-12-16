@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\Comment;
 use App\Models\Episode;
-
 use App\Models\Serie;
 use Illuminate\Http\Request;
 
@@ -17,21 +15,20 @@ class SerieController extends Controller
     }
 
 
-
     public function rechercheGenre($genre){
         $tab=[];
         $serie=Serie::where('genre',$genre)
-                ->orderBy('nom')
-                ->get();
+            ->orderBy('nom')
+            ->get();
         foreach ($serie as $series)
             $tab[]=[$series->id,$series->nom,$series->urlImage];
         return json_encode($tab);}
 
     public function cinqSeries(){
         $serie=Serie::select('id','urlImage')
-        -> orderBy('note','desc')
-        -> take(5)
-        -> get();
+            -> orderBy('note','desc')
+            -> take(5)
+            -> get();
         return view('welcome',['series'=>$serie]);
     }
 
@@ -57,5 +54,4 @@ class SerieController extends Controller
 
         return view('test',['series'=>$serie,'commentaires'=>$commentaire,'episodes'=>$episode]);
     }
-
 }

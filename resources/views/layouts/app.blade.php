@@ -64,9 +64,7 @@
             </form>
         @endguest
     </ul>
-
 </nav> --}}
-
 
 <!-- Scripts -->
 </body>

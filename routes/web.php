@@ -19,5 +19,4 @@ Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->na
 
 Route::get('/liste/{id}',[\App\Http\Controllers\SerieController::class, 'detailSerie'])->name('id');
 
-
 //Route::post("/login", );
