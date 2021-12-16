@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'add9b1ba97c0d0f8ab1135329feec0fdcd012a41',
+        'reference' => 'decda631a8a3ec95d63fd28ae6b1eae32810f531',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -427,7 +427,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'add9b1ba97c0d0f8ab1135329feec0fdcd012a41',
+            'reference' => 'decda631a8a3ec95d63fd28ae6b1eae32810f531',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
