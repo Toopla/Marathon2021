@@ -19,14 +19,14 @@
     <a href="" id="aLogo"><img src="img/logo.png" id= "imgLogo"></a>
     @if(isset($_SESSION['id']))
         <div id="headerProfil">
-           <h3><a href="">Bonjour [INSERT NOM]</a></h3>
-           <a href="" id="aPhotoProfil"><img src="img/faces/avatar1.png" id="imgProfil"></a>
+            <h3><a href="">Bonjour [INSERT NOM]</a></h3>
+            <a href="" id="aPhotoProfil"><img src="img/faces/avatar1.png" id="imgProfil"></a>
         </div>
     @else
         <div id="headerProfil">
             <h3><a href="">Connexion</a><a href="">Inscription</a></h3>
-        </div>  
-    @endif      
+        </div>
+    @endif
 
 </header>
 <div id="main">

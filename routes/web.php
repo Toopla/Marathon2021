@@ -20,4 +20,3 @@ Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->na
 Route::get('/profil/{id}',[\App\Http\Controllers\UserController::class, 'profil'])->name('profil');
 
 Route::get('/liste/{id}',[\App\Http\Controllers\UserController::class, 'detailSerie'])->name('id');
-
