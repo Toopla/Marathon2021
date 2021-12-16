@@ -17,4 +17,10 @@ Route::get('/liste',[\App\Http\Controllers\SerieController::class, 'index'])->na
 
 Route::get('/',[\App\Http\Controllers\SerieController::class, 'cinqSeries'])->name('accueil');
 
-//Route::post("/login", );
+Route::get('/connexion',[\App\Http\Controllers\UserController::class, 'versConnexion'])->name('versConnexion');
+
+Route::post('/connexion',[\App\Http\Controllers\UserController::class, 'connexion'])->name('connexion');
+
+Route::get('/inscription',[\App\Http\Controllers\UserController::class, 'versInscription'])->name('versInscription');
+
+Route::post('/inscription',[\App\Http\Controllers\UserController::class, 'inscription'])->name('inscription');

@@ -8,12 +8,11 @@
 
 @section('content')
 	<div id="Profil">
-		<div id="imgProfil" style="background-image: url('img/faces/avatar.png');">
+		<div id="imgProfil" style="background-image: url('img/faces/{{$user['avatar']}}.png');">
 			<img src="img/crayon.png">		
 		</div>	
 		<div>
-			<h1>Bidule Truc</h1>
-			<h2>Rang Plongeur</h2>
+			<h1>{{$user['nom']}}</h1>
 		</div>	
 	</div>
 
@@ -22,13 +21,13 @@
 			<h1>VOS COMMENTAIRES</h1>
 		</div>
 		<div id="commentList">
-			@foreach()
+			@foreach($user['commentaires'] as $comment)
 				<div id="comment">
 					<div id="contenue">
-						<p></p>
+						<p>{{$comment['content']}}</p>
 					</div>
 					<div id="note">
-						
+						{{$comment['note']}}
 					</div>
 				</div>
 			@endforeach
