@@ -7,26 +7,28 @@
 @section('content')
 
 
-
+{{-- 
     <div id="form">
         <h1>Bienvenue à toi !</h1>
-        <form method="POST" action="{{route('inscription')}}">
+        <form method="POST" action="{{route('register')}}">
             @csrf
             <input type="text" name="name" placeholder="Nom d'utilisateur">
             <input type="email" name="email" placeholder="Votre adresse mail">
             <input type="password" name="password" placeholder="Votre mot de passe">
             <input type="password" name="password_confirmation" placeholder="Confirmer le mot de passe">
-            <button type="submit">S'inscrire</button>
+            <button type="submit" value="S'inscrire">S'inscrire</button>
         </form>
     </div>
 
+ --}}
 
 
 
 
+   <div class="container">
 
-   {{--  <div class="container">
         <div class="row justify-content-center">
+            
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Register') }}</div>
@@ -97,5 +99,6 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+
+    </div> 
 @endsection
