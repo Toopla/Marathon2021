@@ -34,7 +34,7 @@
 <div class="lavideo">
 <video width="600" height="400" controls>
 
-<source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+<source src="img/Générique.mp4" type=video/mp4>
 </video>
 </div>
 </div>
