@@ -7,14 +7,14 @@
 
 @section('content')
 	<div id="icon">
-		<a href=""><i class="fas fa-cog"></i></a>
+		<a href="{{route('perso', $id)}}"><i class="fas fa-cog"></i></a>
 	</div>	
 	<div id="Profil">
 		<div id="imgProfil" style="background-image: url('public/img/faces/avatar.png');">
 			<a href=""><i class="fas fa-pen"></i></a>
 		</div>	
 		<div>
-			<h1>{{$user['nom']}}</h1>
+			<h1>{{$nom}}</h1>
 		</div>	
 	</div>
 
@@ -23,7 +23,7 @@
 			<h1>VOS COMMENTAIRES</h1>
 		</div>
 		<div id="commentList">
-			@foreach($user['commentaires'] as $comment)
+			@foreach($commentaires as $comment)
 				<div id="comment">
 					<div id="contenue">
 						<p>{{$comment['content']}}</p>
