@@ -6,6 +6,8 @@ use App\Models\Comment;
 use App\Models\Episode;
 use App\Models\Serie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class SerieController extends Controller
 {
@@ -64,5 +66,30 @@ class SerieController extends Controller
             ->get();
 
         return view('test', ['series' => $serie, 'commentaires' => $commentaire, 'episodes' => $episode]);
+    }
+
+    public function store(Request $request){
+        $this->validate(
+            $request,
+            [
+                'commentaire'=>'required',
+                'note'=>'required',
+                'serie'=>'required',
+            ]
+        );
+
+        DB::table('comments')->insert(
+            [
+                'content'=>$request->commentaire,
+                'note'=>$request->note,
+                'validated'=>false,
+                'user_id'=>Auth::user()->id,
+                'serie_id'=>$request->serie,
+                'created_at'=>now(),
+                'updated_at'=>now(),
+            ]
+        );
+
+        header($_SERVER['HTTP_REFERER']);
     }
 }

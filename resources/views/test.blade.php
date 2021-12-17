@@ -1,4 +1,4 @@
-@extends('layouts.profilLayoutParam')
+@extends('layouts.serieLayout')
 @section('css')
 @endsection
 @section('content')
@@ -28,7 +28,7 @@
                         <div class="genrepremiere">
                             <div class="genre">GENRE <br> <p>{{$elt->genre}}</p></div>
                             <div class="premiere">DATE DE PREMIERE SORTIE<p>{{$elt->premiere}}</p></div>
-          
+
                 @endforeach
                 </div>
                 </div>
@@ -51,7 +51,7 @@
         <form method="POST" action="{{route('liste.store')}}">
             {{ csrf_field() }}
 
-            <input type="text" name="serie" value="{{$elt->id}}" hidden>
+            <input type="text" name="serie" value="{{$elt->id}}">
             <select name="note">
                 <option>1</option>
                 <option>2</option>
