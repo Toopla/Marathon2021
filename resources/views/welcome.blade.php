@@ -15,7 +15,7 @@
         </form>
 
 
-        <h1> FILMS A L'AFFICHE </h1>
+        <h1> SERIES A L'AFFICHE </h1>
         <div class="lesfilms">
             @if(!empty($series))
 

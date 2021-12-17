@@ -1,4 +1,4 @@
-@extends('layouts.serieLayout')
+@extends('layouts.profilLayoutParam')
 @section('css')
 @endsection
 @section('content')
@@ -23,7 +23,12 @@
                                     </div>
                                 </div>
                             </div>
-                    </div> <div class="leresume"><p>RÉSUMÉ</p>{{$elt->resume}}</div> <div class="genrepremiere"><div class="genre">GENRE </br> <p>{{$elt->genre}}</p></div> <div class="premiere">DATE DE PREMIERE SORTIE<p>{{$elt->premiere}}</p></div></div> </div>
+                        </div>
+                        <div class="leresume"><p>RÉSUMÉ</p>{{$elt->resume}}</div>
+                        <div class="genrepremiere">
+                            <div class="genre">GENRE <br> <p>{{$elt->genre}}</p></div>
+                            <div class="premiere">DATE DE PREMIERE SORTIE<p>{{$elt->premiere}}</p></div>
+          
                 @endforeach
                 </div>
                 </div>
@@ -42,10 +47,20 @@
         <h3>si ça affiche ça c'est que c'est pas bon (serie)</h3>
     @endif
 
-    <div class="partiecommentaire">
-        <div class="ajout">
+    <div id="form">
+        <form method="POST" action="{{route('liste.store')}}">
+            {{ csrf_field() }}
 
-        </div>
+            <input type="text" name="serie" value="{{$elt->id}}" hidden>
+            <select name="note">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <textarea name="commentaire"></textarea>
+            <input type="submit" name="envoyer">
+        </form>
     </div>
-
 @endsection

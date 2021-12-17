@@ -114,3 +114,38 @@ p  {
 .partie1 {
     margin-left:15%
 }
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form textarea{
+    width: 20rem;
+    height: 10rem;
+    border-style: solid;
+    border-color: #ff9a00;
+}
+
+#form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form input[type='submit']{
+    width: 5rem;
+    min-height: 2rem;
+    background-color: white;
+    border: none;
+}
+
+#form form select{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-style: solid;
+    border-color: #ff9a00;
+}
+
