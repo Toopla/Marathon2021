@@ -1,4 +1,4 @@
-@extends('layouts.serieLayout')
+@extends('layouts.profilLayoutParam')
 @section('css')
 @endsection
 @section('content')
